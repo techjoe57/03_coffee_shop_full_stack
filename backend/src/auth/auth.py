@@ -3,12 +3,12 @@ from flask import request, _request_ctx_stack
 from functools import wraps
 from jose import jwt
 from urllib.request import urlopen
-from os import environ
+from settings import ALGORITHMS, API_AUDIENCE, AUTH0_DOMAIN
 
 
-AUTH0_DOMAIN = environ.get("AUTH0_DOMAIN")
-ALGORITHMS = environ.get("ALGORITHMS")
-API_AUDIENCE = environ.get("API_AUDIENCE")
+AUTH0_DOMAIN = AUTH0_DOMAIN 
+ALGORITHMS = ALGORITHMS
+API_AUDIENCE = API_AUDIENCE
 
 ## AuthError Exception
 '''
